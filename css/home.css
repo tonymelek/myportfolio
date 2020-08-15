@@ -1,0 +1,85 @@
+.upper_page{
+position: relative;
+height: 95vh;
+}
+video {
+    opacity: .78;
+    object-fit: cover;
+    min-height: 95vh;
+    width: 100%;
+}
+.upper_page>h1,.upper_page>h2,.upper_page>a{
+    position: absolute;
+    z-index: 2;
+}
+.myname{
+    top: 20%;
+    width: 100%;
+    color:rgb(255, 166, 0);
+}
+.mytitle{
+    top: 35%;
+    width: 100%;
+    color:rgb(225, 252, 105);
+}
+#details{
+    top: 65%;
+    left: 60%;
+    color:rgb(225, 252, 105);
+}
+
+.bottom_page{
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top:5%;
+}
+.tony_photo{
+ 
+   width: 100%;
+    border-radius: 350px;
+}
+.aboutme{
+    width: 100%;
+    color: white;
+}
+.card{
+  opacity: .9;
+  background-color: rgb(156, 155, 155);
+  color:rgb(2, 4, 73);
+  margin-bottom: 20px;
+  position: relative;
+}
+.skills{
+    list-style: none;
+
+}
+.skills>li{
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 36pt;
+}
+.fa-html5{
+    color: orangered;
+}
+.fa-js{
+color: orange;
+}
+.fa-css3-alt{
+    color:blue;
+}
+.fa-bootstrap{
+    color: purple;
+}
+#to_top{
+    position: absolute;
+    right: 20px;
+}
+
+/* MediaQuery */
+@media only screen and (max-width: 400px) {
+    .bottom_page{
+        height: 155vh;
+    }
+}
