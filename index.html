@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tony Melek | Portfolio</title>
+    <title>Tony Melek</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
 
 </head>
 
 <body>
+    <!-- Header (Navigation Bar) -->
     <header id="upper_page">
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span><i class="fas fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarText">
                 <ul class="navbar-nav">
@@ -30,50 +32,57 @@
         </nav>
 
     </header>
-    <div class="upper_page">
-        <h1 class="display-4 text-center mb-5 myname">Tony Melek</h1>
-        <h2 class="display-5 text-center mb-5 mytitle">Full stack web developer and passionate learner</h1>
-            <a href="#bottom_page" class="btn btn-large btn-outline-warning" id="details">See Details &nbsp;<i
-                    class="fas fa-arrow-right"></i></a>
-            <video src="./video/background.mp4" autoplay loop></video>
+    <main>
+        <!-- Upper Page (Landing Page View) -->
+        <div class="upper_page">
+            <h1 class="display-4 text-center mb-5 myname">Tony Melek</h1>
+            <h2 class="display-5 text-center mb-5 mytitle">Full stack web developer and passionate learner</h1>
+                <a href="#bottom_page" class="btn btn-large btn-outline-warning" id="details">See Details &nbsp;<i
+                        class="fas fa-arrow-right"></i></a>
+                <video src="./video/background.mp4" autoplay loop></video>
 
-    </div>
-    <div class="bottom_page" id="bottom_page">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                    <img class="tony_photo" src="./images/prof.jpg" alt="Tony Photo">
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <h1 class="text-center aboutme">About Me</h1>
-                    <div class="card mx-auto">
-                        <div class="card-body">
-                            <p class="card-text">I have a firm knowledge of HTML, CSS and JavaScript slong with
-                                frameworks and libraries like Bootstrap and JQuery.</p>
-
-                            <p class="card-text">
-                                I am self-motivated, result oriented, fast learner, can work in a team or on my own with
-                                minimal supervision and constantly seeking to improve my skills.</p>
-
-                            <p class="card-text"> My Technical Skill list :</p>
-                            <ul class="skills text-center">
-                                <li><i class="fab fa-html5"></i></li>
-                                <li><i class="fab fa-js"></i></li>
-                                <li><i class="fab fa-css3-alt"></i></li>
-                                <li><i class="fab fa-bootstrap"></i></li>
-                            </ul>
-                        </div>
-
+        </div>
+        <!-- About Me Scetion -->
+        <div class="bottom_page" id="bottom_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                        <img class="tony_photo" src="./images/prof.jpg" alt="Tony Photo">
                     </div>
-                    <a href="#upper_page" class="btn btn-large btn-outline-warning" id="to_top">Back
-                        to the
-                        top
-                        &nbsp;<i class="fas fa-arrow-up"></i></a>
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <h1 class="text-center contactme">About Me</h1>
+                        <div class="card mx-auto">
+                            <div class="card-body">
+                                <p class="card-text">I have a firm knowledge of HTML, CSS and JavaScript slong with
+                                    frameworks and libraries like Bootstrap and JQuery.</p>
+
+                                <p class="card-text">
+                                    I am self-motivated, result oriented, fast learner, can work in a team or on my own
+                                    with
+                                    minimal supervision and constantly seeking to improve my skills.</p>
+
+                                <p class="card-text"> My Technical Skill list :</p>
+                                <ul class="skills text-center">
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-js"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-bootstrap"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <a href="#upper_page" class="btn btn-large btn-outline-warning" id="to_top">Back
+                            to the
+                            top
+                            &nbsp;<i class="fas fa-arrow-up"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </main>
+    <!-- Footer -->
     <footer>
         <p class="text-center">Copyright &copy <a href="mailto:tonymelek.au@gmail.com" class="text-warning">Tony
                 Melek</a> 2020</p>
