@@ -1,6 +1,6 @@
 # Portfolio
 ## Description
-My Portfolio has a list of the projects that I have built and links to my social media ( Linked-in and GitHub and my YouTube channel `Beginner Developer Tips and Tricks).
+My Portfolio has a list of the projects that I have built and links to my social media ( Linked-in and GitHub and my YouTube channel `Beginner Developer Tips and Tricks`).
 The project has 3 pages:
 * Landing Page (Home and  About me).
 ![LandingPage](./markdown_assets/landing.jpg)
@@ -10,6 +10,7 @@ The project has 3 pages:
 * Contact Me
 ![ContactMe](./markdown_assets/contactme.jpg)
 *The Site is responsive*
+
 ![MobileView](./markdown_assets/mobile.jpg)
 ## Technologies used
 My portfolio maked use of the `Bootstrap` framework, in addition to `HTML-5` and `CSS-3`
