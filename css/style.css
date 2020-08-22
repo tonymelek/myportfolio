@@ -99,6 +99,8 @@ video {
 .project{
     margin-top: 20px;
     position: relative;
+    background-color: transparent;
+    
 }
 .project .card-body{
 display: none;
