@@ -6,6 +6,7 @@ html{
 /* Navigation bar adjustment to have Orange coloured text */
 .nav-link {
     color: orange!important;
+    font-size: 1.5rem;;
 }
 .nav-link:hover{
     font-weight: bolder;
@@ -43,7 +44,7 @@ video {
 #details{
     top: 65%;
     left: 60%;
-    color:rgb(225, 252, 105);
+    color: black;
 }
 /* Bottom Page in index.html and main page area for other pages */
 .bottom_page{
