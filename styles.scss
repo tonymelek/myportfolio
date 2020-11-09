@@ -1,0 +1,61 @@
+$base-color:#F68C22;
+$sub-base:rgb(252, 240, 218);
+$super-head:4rem;
+$sub-head:2.7rem;
+$nav-font-size:1.3rem;
+$sub-title: 'Dancing Script', cursive;
+.super-head{
+    font-size: $super-head;
+    color: $base-color;
+}
+.sub-head-main{
+    font-size: $sub-head;
+    color: $sub-base;
+}
+.sub-title{
+font-family: $sub-title;
+color: $sub-base;
+}
+nav{
+     margin:0; 
+     font-size: $nav-font-size;
+}
+.tony-photo{
+    border-radius: 250px;
+    height: 300px;
+}
+.home-main{
+    background: url('./img/main-bg.jpg')  no-repeat;
+    background-size: cover;
+    max-height:150vh;
+}
+.active{
+    font-weight: bolder;
+    color: $base-color!important;
+}
+.card{
+    opacity: 0.7;
+
+.tech{
+    height:50px;
+}
+.social{
+    max-height:50px;
+}
+}
+.form{
+    opacity: 0.85;
+}
+.navbar-brand{
+    color: $base-color! important;
+}
+.project{
+    // height: 75vh;
+    // overflow: scroll;
+    // overflow-x: hidden;
+}
+footer{
+    p{
+        color: $base-color;
+    }
+}
