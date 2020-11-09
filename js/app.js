@@ -20,7 +20,19 @@ function elementInViewport(el) {
         (left + width) <= (window.pageXOffset + window.innerWidth)
     );
 }
-const goPortfolio = document.querySelector('#go-portfolio')
-if (elementInViewport(goPortfolio)) {
-    $('#go-portfolio').addClass('animate__fadeInUp')
-}
+
+
+$(document).scroll(() => {
+    if ($('#go-portfolio')[0]) {
+        if (elementInViewport($('#go-portfolio')[0])) {
+            $('#go-portfolio').addClass('animate__fadeInUp')
+        }
+    }
+    if ($('.social')) {
+        for (item of $('.social')) {
+            if (elementInViewport(item)) {
+                $('.social').addClass('animate__zoomIn')
+            }
+        }
+    }
+})
