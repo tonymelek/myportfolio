@@ -26,7 +26,7 @@ nav {
 .home-main {
   background: url("./img/main-bg.jpg") no-repeat;
   background-size: cover;
-  max-height: 150vh;
+  max-height: 300vh;
 }
 
 .active {
