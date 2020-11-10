@@ -30,7 +30,8 @@ nav {
 .home-main {
   background: url("./img/main-bg.jpg") no-repeat;
   background-size: cover;
-  height: 100%;
+  min-height: 100%;
+  border-radius: 0;
 }
 
 .active {
@@ -56,6 +57,10 @@ nav {
 
 .navbar-brand {
   color: #F68C22 !important;
+}
+
+footer {
+  width: 100%;
 }
 
 footer p {
