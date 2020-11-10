@@ -4,6 +4,9 @@ $super-head:4rem;
 $sub-head:2.7rem;
 $nav-font-size:1.3rem;
 $sub-title: 'Dancing Script', cursive;
+body,html{
+    height:100%;
+}
 .super-head{
     font-size: $super-head;
     color: $base-color;
@@ -27,7 +30,7 @@ nav{
 .home-main{
     background: url('./img/main-bg.jpg')  no-repeat;
     background-size: cover;
-    max-height:300vh;
+    height:100%;
 }
 .active{
     font-weight: bolder;
