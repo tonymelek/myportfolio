@@ -2,6 +2,10 @@ body, html {
   height: 100%;
 }
 
+sup {
+  font-size: 1rem;
+}
+
 .super-head {
   font-size: 4rem;
   color: #F68C22;
@@ -57,6 +61,16 @@ nav {
 
 .navbar-brand {
   color: #F68C22 !important;
+}
+
+.good-input {
+  -webkit-box-shadow: 0 0 0 0.2rem lime !important;
+          box-shadow: 0 0 0 0.2rem lime !important;
+}
+
+.bad-input {
+  -webkit-box-shadow: 0 0 0 0.2rem red !important;
+          box-shadow: 0 0 0 0.2rem red !important;
 }
 
 footer {
