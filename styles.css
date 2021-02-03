@@ -48,7 +48,8 @@ nav {
 }
 
 .card .tech {
-  height: 50px;
+  height: 60px;
+  padding: 5px;
 }
 
 .card .social {
