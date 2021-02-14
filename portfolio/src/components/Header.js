@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiMenu } from 'react-icons/bi'
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css'
 export default function Header() {
+
     const [clicked, setClicked] = useState(false)
-    const [navDisplay, setNavDisplay] = useState(true)
+    const [navDisplay, setNavDisplay] = useState(window.innerWidth < 600 ? false : true)
+    const location = useLocation();
+    const active = location.pathname.split('/')[1];
 
     useEffect(() => {
         // Add event listener
@@ -15,18 +19,18 @@ export default function Header() {
                 setNavDisplay(true)
             }
         });
-
-    }); // Empty array ensures that effect is only run on mount 
+    }, []);
     return (
         <div className="header">
 
             <div className='burger__menu cursor-pointer' onClick={() => setClicked(!clicked)}>
                 <BiMenu />
             </div>
-            <nav className={`navbar ${navDisplay || clicked ? 'd-flex animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeOutRight d-none'} `}>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>  Contact Me</li>
+            <nav className={`navbar ${navDisplay || clicked ? 'd-flex ' : 'd-none'} `}>
+
+                <li onClick={() => { console.log(clicked, navDisplay) }}><Link className={`react__link ${active === '' ? 'active' : ''}`} to="/" >Home</Link></li>
+                <li onClick={() => console.log(clicked, navDisplay)}><Link className={`react__link ${active === 'portfolio' ? 'active' : ''}`} to="/portfolio">Projects</Link></li>
+                <li onClick={() => console.log(clicked, navDisplay)}><Link className={`react__link ${active === 'contact-me' ? 'active' : ''}`} to="/contact-me">Contact Me</Link></li>
             </nav>
         </div>
     )

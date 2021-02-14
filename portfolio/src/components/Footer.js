@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaRegFilePdf } from 'react-icons/fa'
 export default function Footer() {
     return (
         <div className="footer">
-            <div className="d-flex justify-content-around align-items-center">
+            <div className="d-flex flex-wrap justify-content-around align-items-center">
                 <div className="d-flex flex-column">
                     <p>Phone: <a href="tel:0426 081 060">0426 081 060</a></p>
                     <p>Email: <a href="mailto:tonymelek.au@gmail.com">tonymelek.au@gmail.com</a></p>

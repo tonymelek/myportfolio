@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  .my__projects{
+    height: 68vh;
+    overflow-y: scroll;
+  }
 }
 
 .project__card__container{
@@ -13,6 +17,7 @@
   width:100%;
   height: 100vh;
   overflow-y: scroll;
+  padding:.5rem;
 }
 .hazy{
   filter: blur(5px);

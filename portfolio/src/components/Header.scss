@@ -14,14 +14,23 @@ $lighy-black:#353A3E;
         z-index: 2;
         background-color: $lighy-black;
         justify-content: center;
-        
         li{
             list-style: none;
+        
+        .react__link{
+            text-decoration: none;
             color: orange;
             font-size: 1.5rem;
             font-weight: 700;
             margin:0 1rem;
         }
+        .active{
+             color:rgb(124, 235, 33);
+        }
+        .react__link:hover{
+            color:rgb(150, 164, 243);
+        }
+    }
 }
    
 }

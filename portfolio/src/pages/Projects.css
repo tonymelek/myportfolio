@@ -12,6 +12,11 @@
   height: 100vh;
 }
 
+.projects__main .my__projects {
+  height: 68vh;
+  overflow-y: scroll;
+}
+
 .project__card__container {
   position: absolute;
   z-index: 10;
@@ -23,6 +28,7 @@
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  padding: .5rem;
 }
 
 .hazy {

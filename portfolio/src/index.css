@@ -1,5 +1,6 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/animate.css/animate.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Yellowtail&display=swap');
 body {
   margin: 0;
   padding:0;
@@ -29,4 +30,10 @@ code {
 }
 :root {
   --animate-delay: 0.25s;
+}
+.titles{
+ font-family: 'Yellowtail', cursive;
+  font-size: 2.5rem;
+  color: azure;
+  text-align: center;
 }

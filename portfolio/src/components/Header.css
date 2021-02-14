@@ -22,10 +22,22 @@
 
 .header .navbar li {
   list-style: none;
+}
+
+.header .navbar li .react__link {
+  text-decoration: none;
   color: orange;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 1rem;
+}
+
+.header .navbar li .active {
+  color: #7ceb21;
+}
+
+.header .navbar li .react__link:hover {
+  color: #96a4f3;
 }
 
 @media only screen and (max-width: 600px) {

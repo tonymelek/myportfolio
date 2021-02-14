@@ -1,0 +1,23 @@
+.home__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  .my__name{
+      margin: 0;
+      padding:0;
+      color:orange;
+      font-size: 4rem;
+      font-family: 'Permanent Marker', cursive;
+  }
+  .my__photo{
+      border-radius: 15rem;
+      height:20rem;
+      display: block;
+      margin:0;
+  }
+  .main__content__container{
+height: 66vh;
+overflow-y: scroll;
+  }
+}
