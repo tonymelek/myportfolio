@@ -1,0 +1,41 @@
+$lighy-black:#353A3E;
+.header{
+      background-color: $lighy-black;
+    .burger__menu{
+          color: orange;
+          display: none;
+          margin: 0;
+          padding: 0;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        top:0;
+        z-index: 2;
+        background-color: $lighy-black;
+        justify-content: center;
+        
+        li{
+            list-style: none;
+            color: orange;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin:0 1rem;
+        }
+}
+   
+}
+ @media only screen and (max-width:600px) {
+    .navbar{
+            flex-direction: column;
+            align-items: flex-start; 
+            top: 4rem !important;;
+        }
+    .burger__menu{
+         color: white;
+         font-size: 3rem;
+         display: block!important;
+     
+        }
+
+    }

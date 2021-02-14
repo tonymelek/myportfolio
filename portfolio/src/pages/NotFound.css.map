@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,MAAM,EAAC,MAAM;EACb,KAAK,EAAC,GAAG;EACT,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAQtB;;AAbD,AAMI,eANW,CAMX,EAAE,EANN,eAAe,CAMR,EAAE,CAAA;EACD,UAAU,EAAE,MAAM;CACrB;;AARL,AASI,eATW,CASX,EAAE,CAAA;EACF,KAAK,EAAC,GAAG;EACT,WAAW,EAAE,GAAG;CACf",
+    "sources": [
+        "NotFound.scss"
+    ],
+    "names": [],
+    "file": "NotFound.css"
+}

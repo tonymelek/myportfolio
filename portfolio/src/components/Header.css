@@ -1,0 +1,48 @@
+.header {
+  background-color: #353A3E;
+}
+
+.header .burger__menu {
+  color: orange;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: #353A3E;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .navbar li {
+  list-style: none;
+  color: orange;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    top: 4rem !important;
+  }
+  .burger__menu {
+    color: white;
+    font-size: 3rem;
+    display: block !important;
+  }
+}
+/*# sourceMappingURL=Header.css.map */

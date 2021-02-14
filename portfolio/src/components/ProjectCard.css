@@ -1,0 +1,20 @@
+.close-display {
+  text-align: right;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.project__card__main img {
+  display: block;
+  width: 100%;
+}
+
+.tech__item {
+  background-color: #fc5353;
+  color: white;
+  font-weight: 500;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=ProjectCard.css.map */
