@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BiMenu } from 'react-icons/bi'
-import { Link, useLocation } from 'react-router-dom';
+import { HashRouter, Link, useLocation } from 'react-router-dom';
 import './Header.css'
 export default function Header() {
 
@@ -26,10 +26,11 @@ export default function Header() {
                 <BiMenu />
             </div>
             <nav className={`navbar ${navDisplay || clicked ? 'd-flex ' : 'd-none'} `}>
-
-                <li ><Link className={`react__link ${active === '' ? 'active' : ''}`} to="/" >Home</Link></li>
-                <li ><Link className={`react__link ${active === 'portfolio' ? 'active' : ''}`} to="/portfolio">Projects</Link></li>
-                <li ><Link className={`react__link ${active === 'contact-me' ? 'active' : ''}`} to="/contact-me">Contact Me</Link></li>
+                <HashRouter>
+                    <li ><Link className={`react__link ${active === '' ? 'active' : ''}`} to="/" >Home</Link></li>
+                    <li ><Link className={`react__link ${active === 'portfolio' ? 'active' : ''}`} to="/portfolio">Projects</Link></li>
+                    <li ><Link className={`react__link ${active === 'contact-me' ? 'active' : ''}`} to="/contact-me">Contact Me</Link></li>
+                </HashRouter>
             </nav>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Projects from './pages/Projects';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -25,7 +25,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
