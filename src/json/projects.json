@@ -20,7 +20,7 @@
         "deployed_app": "https://ez-portal.herokuapp.com/"
     },
     {
-        "name": "BandEar",
+        "name": "BandEaR",
         "about_p1": "Using multiple Web APIs (Spotify,Bands in town, IP Info, Google Maps) to search artists and display their top hits.",
         "about_p2": "The application displays a list of upcoming events(if there is any) for the selected artist /band and displays all the info. on the map including venue and nearby accomodations.",
         "about_p3": "The aim of the app was to integrate all these options into one place for music lovers",
