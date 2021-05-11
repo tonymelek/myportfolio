@@ -1,8 +1,10 @@
-$lighy-black:#353A3E;
+
+@import './variables.scss';
+
 .header{
-      background-color: $lighy-black;
+      background-color: $light-black;
     .burger__menu{
-          color: orange;
+          color: $light_orange;
           display: none;
           margin: 0;
           padding: 0;
@@ -12,23 +14,23 @@ $lighy-black:#353A3E;
         width: 100%;
         top:0;
         z-index: 2;
-        background-color: $lighy-black;
+        background-color: $light-black;
         justify-content: center;
         li{
             list-style: none;
         
         .react__link{
             text-decoration: none;
-            color: orange;
+            color: $light_orange;
             font-size: 1.5rem;
             font-weight: 700;
             margin:0 1rem;
         }
         .active{
-             color:rgb(124, 235, 33);
+             color:$shiny_orange;
         }
         .react__link:hover{
-            color:rgb(150, 164, 243);
+            color:$pale_orange;
         }
     }
 }

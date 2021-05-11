@@ -1,21 +1,17 @@
 .project__brief__item {
-  -webkit-box-shadow: 3px 3px 5px 6px #b1daf5;
-          box-shadow: 3px 3px 5px 6px #b1daf5;
-  border-radius: .5rem;
+  box-shadow: 3px 3px 5px 6px #b1daf5;
+  border-radius: 0.5rem;
 }
-
 .project__brief__item img {
   width: 100%;
   height: 240px;
   margin-bottom: 1.5rem;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
-
 .project__brief__item .click__note {
   text-align: center;
   color: red;
   font-weight: 700;
   font-style: italic;
 }
-/*# sourceMappingURL=ProjectBrief.css.map */

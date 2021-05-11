@@ -11,17 +11,17 @@ export default function Footer() {
                 </div>
 
                 <div className="d-flex">
-                    <div className="d-flex flex-column align-items-center mb-2">
+                    <div className="d-flex flex-column align-items-center mb-2 links">
                         <a href="https://github.com/tonymelek" target="_blank"><FaGithub className="icons" /></a>
-                        <p>Github</p>
+                        <p><a href="https://github.com/tonymelek" target="_blank">Github</a></p>
                     </div>
-                    <div className="d-flex flex-column align-items-center  mb-2">
+                    <div className="d-flex flex-column align-items-center  mb-2 links">
                         <a href="https://www.linkedin.com/in/tonymelek/" target="_blank"><FaLinkedin className="icons" /></a>
-                        <p>LinkedIn</p>
+                        <p><a href="https://www.linkedin.com/in/tonymelek/" target="_blank">LinkedIn</a></p>
                     </div>
-                    <div className="d-flex flex-column align-items-center  mb-2">
+                    <div className="d-flex flex-column align-items-center  mb-2 links">
                         <a href="./resume/TonyMelek_Resume.pdf" download><FaRegFilePdf className="icons" /></a>
-                        <p>Resume</p>
+                        <p><a href="./resume/TonyMelek_Resume.pdf" download>Resume</a></p>
                     </div>
                 </div>
             </div>

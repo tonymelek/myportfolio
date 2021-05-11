@@ -1,17 +1,9 @@
 .projects__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
 }
-
 .projects__main .my__projects {
   height: 68vh;
   overflow-y: scroll;
@@ -20,20 +12,16 @@
 .project__card__container {
   position: absolute;
   z-index: 10;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .hazy {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  filter: blur(5px);
 }
 
 .project__summary {
@@ -45,10 +33,8 @@
     width: 40%;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .project__summary {
     width: 22%;
   }
 }
-/*# sourceMappingURL=Projects.css.map */

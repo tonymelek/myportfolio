@@ -1,29 +1,45 @@
-$lighy-black:#353A3E;
+@import './variables.scss';
+
 .footer{
     width:100%;
     // height: 15vh;
-    background-color: $lighy-black;
-    color: orange;
-    font-size: 1.1rem;
+    background-color: $light-black;
+    color: $light_orange;
+    font-size: 1rem;
+    
     ul{
         list-style: none;
+       
     }
     .icons{
-     font-size: 2.5rem;   
+     font-size: 1.7rem;
+       &:hover{
+            color:$shiny_orange;
+        } 
     }
-   
+   .links:hover{
+       a{
+           color: $shiny_orange;
+       }
+       .icons{
+           color: $shiny_orange;
+       }
+   }
     p{
         margin: 0 2rem;
-       
+        &:hover{
+            color:$shiny_orange;
+        }  
+        
+    }
     }
      a{
            text-decoration: none;
-           color:orange; 
+           color:$light_orange; 
            margin: 10px 10px;
-        }
- 
-   a:hover{
-            color:rgb(150, 164, 243);
-        }
-    
-}
+      
+        &:hover{
+            color:$shiny_orange;
+      
+    }
+    }
