@@ -1,0 +1,66 @@
+<main class="pt-24 md:pt-28">
+  <article class="mx-auto max-w-3xl px-5 pb-24 md:px-8">
+    <p class="reveal mb-8">
+      <a href="work.html" class="project-link">← All work</a>
+    </p>
+
+    <header class="reveal border-b border-line pb-10">
+      {{#if caseStudy.tag}}
+        <p class="eyebrow mb-4">{{caseStudy.tag}}</p>
+      {{/if}}
+      <h1 class="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-6xl">
+        {{caseStudy.title}}
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-soft">
+        {{caseStudy.summary}}
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        {{#if caseStudy.live}}
+          <a class="btn btn-warm" href="{{caseStudy.live}}" target="_blank" rel="noopener noreferrer">Visit live</a>
+        {{/if}}
+        {{#if caseStudy.code}}
+          <a class="btn btn-ghost" href="{{caseStudy.code}}" target="_blank" rel="noopener noreferrer">View code</a>
+        {{/if}}
+      </div>
+      {{#if caseStudy.stack}}
+        <ul class="mt-8 flex flex-wrap gap-2" aria-label="Stack">
+          {{#each caseStudy.stack}}
+            <li class="skill-chip">{{this}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </header>
+
+    <section class="reveal border-b border-line py-10" aria-labelledby="problem-heading">
+      <h2 id="problem-heading" class="eyebrow mb-4">Problem</h2>
+      <p class="text-base leading-relaxed text-soft md:text-lg">{{caseStudy.problem}}</p>
+    </section>
+
+    <section class="reveal border-b border-line py-10" aria-labelledby="approach-heading">
+      <h2 id="approach-heading" class="eyebrow mb-4">Approach</h2>
+      <ul class="list-disc space-y-3 pl-5 text-base leading-relaxed text-soft md:text-lg">
+        {{#each caseStudy.approach}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="reveal border-b border-line py-10" aria-labelledby="owned-heading">
+      <h2 id="owned-heading" class="eyebrow mb-4">What I owned</h2>
+      <ul class="list-disc space-y-3 pl-5 text-base leading-relaxed text-soft md:text-lg">
+        {{#each caseStudy.owned}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="reveal py-10" aria-labelledby="outcome-heading">
+      <h2 id="outcome-heading" class="eyebrow mb-4">Outcome</h2>
+      <p class="text-base leading-relaxed text-soft md:text-lg">{{caseStudy.outcome}}</p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="work.html" class="btn btn-ghost">Back to work</a>
+        <a href="contact.html" class="btn btn-ink">Get in touch</a>
+      </div>
+    </section>
+  </article>
+</main>

@@ -1,5 +1,7 @@
 /** Page definitions + content for the Handlebars build (marinkart-style). */
 
+import { caseStudies } from "./case-studies.js";
+
 const SITE_URL = "https://tonymelek.github.io/myportfolio";
 
 /** Relative paths — works on GH Pages project site and local preview. */
@@ -31,7 +33,6 @@ const nav = [
   { href: "contact.html", label: "Contact", id: "contact" },
 ];
 
-
 const skills = [
   "React",
   "TypeScript",
@@ -56,6 +57,7 @@ const projects = [
     stack: ["TypeScript", "Vue 3", "Vite", "npm"],
     live: "https://tonymelek.github.io/coptic-language/",
     code: "https://github.com/tonymelek/coptic-language",
+    caseStudy: "coptic-tools",
     highlight: true,
   },
   {
@@ -66,6 +68,7 @@ const projects = [
     stack: ["Handlebars", "Vue 3", "Firebase", "Cloudflare"],
     live: "https://heavenly-healing.com.au/",
     code: "https://github.com/tonymelek/marian-heavenly-healing",
+    caseStudy: "heavenly-healing",
     highlight: true,
   },
   {
@@ -138,6 +141,31 @@ const experience = [
   },
 ];
 
+function caseStudyPage(slug) {
+  const study = caseStudies[slug];
+  return {
+    template: "pages/case-study",
+    out: `${slug}.html`,
+    sitemap: { changefreq: "monthly", priority: "0.70" },
+    data: {
+      ...baseMeta,
+      nav,
+      page: "work",
+      caseStudy: study,
+      title: `${study.title} — Case study · Tony Melek`,
+      description: study.summary,
+      canonical: `${SITE_URL}/${slug}.html`,
+      ogUrl: `${SITE_URL}/${slug}.html`,
+      ogTitle: `${study.title} — Case study`,
+      ogDescription: study.summary,
+      ogImageAlt: study.title,
+      twitterTitle: `${study.title} — Case study`,
+      twitterDescription: study.summary,
+      twitterImageAlt: study.title,
+    },
+  };
+}
+
 export const pages = [
   {
     template: "pages/index",
@@ -191,6 +219,8 @@ export const pages = [
       skills,
     },
   },
+  caseStudyPage("coptic-tools"),
+  caseStudyPage("heavenly-healing"),
   {
     template: "pages/contact",
     out: "contact.html",
