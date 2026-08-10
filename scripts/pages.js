@@ -4,8 +4,25 @@ import { caseStudies } from "./case-studies.js";
 
 const SITE_URL = "https://tonymelek.github.io/myportfolio";
 
-/** Relative paths — works on GH Pages project site and local preview. */
-const BASE = "";
+/**
+ * Nested pages use folder/index.html for clean GH Pages URLs.
+ * `root` prefixes asset + internal links ("" at site root, "../" one level down).
+ */
+function pageLinks(root = "") {
+  const home = root || "./";
+  return {
+    root,
+    homeHref: home,
+    workHref: `${root}work/`,
+    contactHref: `${root}contact/`,
+    resume: `${root}pdf/TonyMelek_Resume.pdf`,
+    nav: [
+      { href: home, label: "Home", id: "home" },
+      { href: `${root}work/`, label: "Work", id: "work" },
+      { href: `${root}contact/`, label: "Contact", id: "contact" },
+    ],
+  };
+}
 
 const baseMeta = {
   author: "Tony Melek",
@@ -18,20 +35,12 @@ const baseMeta = {
   ogImage: `${SITE_URL}/images/icon.png`,
   ogImageWidth: "1200",
   ogImageHeight: "630",
-  base: BASE,
   year: new Date().getFullYear(),
   email: "tonymelek.au@gmail.com",
   phone: "+61 426 081 060",
   linkedin: "https://www.linkedin.com/in/tonymelek/",
   github: "https://github.com/tonymelek",
-  resume: "pdf/TonyMelek_Resume.pdf",
 };
-
-const nav = [
-  { href: "index.html", label: "Home", id: "home" },
-  { href: "work.html", label: "Work", id: "work" },
-  { href: "contact.html", label: "Contact", id: "contact" },
-];
 
 const skills = [
   "React",
@@ -143,19 +152,20 @@ const experience = [
 
 function caseStudyPage(slug) {
   const study = caseStudies[slug];
+  const links = pageLinks("../");
   return {
     template: "pages/case-study",
-    out: `${slug}.html`,
+    out: `${slug}/index.html`,
     sitemap: { changefreq: "monthly", priority: "0.70" },
     data: {
       ...baseMeta,
-      nav,
+      ...links,
       page: "work",
       caseStudy: study,
       title: `${study.title} — Case study · Tony Melek`,
       description: study.summary,
-      canonical: `${SITE_URL}/${slug}.html`,
-      ogUrl: `${SITE_URL}/${slug}.html`,
+      canonical: `${SITE_URL}/${slug}/`,
+      ogUrl: `${SITE_URL}/${slug}/`,
       ogTitle: `${study.title} — Case study`,
       ogDescription: study.summary,
       ogImageAlt: study.title,
@@ -173,7 +183,7 @@ export const pages = [
     sitemap: { changefreq: "monthly", priority: "1.00" },
     data: {
       ...baseMeta,
-      nav,
+      ...pageLinks(""),
       page: "home",
       title: "Tony Melek — Senior Full Stack Engineer",
       description:
@@ -195,17 +205,17 @@ export const pages = [
   },
   {
     template: "pages/work",
-    out: "work.html",
+    out: "work/index.html",
     sitemap: { changefreq: "monthly", priority: "0.80" },
     data: {
       ...baseMeta,
-      nav,
+      ...pageLinks("../"),
       page: "work",
       title: "Work — Tony Melek",
       description:
         "Selected projects: Coptic tools, client CMS pipelines, AI bookkeeping, and platform engineering.",
-      canonical: `${SITE_URL}/work.html`,
-      ogUrl: `${SITE_URL}/work.html`,
+      canonical: `${SITE_URL}/work/`,
+      ogUrl: `${SITE_URL}/work/`,
       ogTitle: "Work — Tony Melek",
       ogDescription:
         "Selected projects across open source, client delivery, and AI products.",
@@ -223,17 +233,17 @@ export const pages = [
   caseStudyPage("heavenly-healing"),
   {
     template: "pages/contact",
-    out: "contact.html",
+    out: "contact/index.html",
     sitemap: { changefreq: "yearly", priority: "0.60" },
     data: {
       ...baseMeta,
-      nav,
+      ...pageLinks("../"),
       page: "contact",
       title: "Contact — Tony Melek",
       description:
         "Get in touch with Tony Melek — email, LinkedIn, GitHub, or download the résumé.",
-      canonical: `${SITE_URL}/contact.html`,
-      ogUrl: `${SITE_URL}/contact.html`,
+      canonical: `${SITE_URL}/contact/`,
+      ogUrl: `${SITE_URL}/contact/`,
       ogTitle: "Contact — Tony Melek",
       ogDescription: "Email, LinkedIn, GitHub, and résumé.",
       ogImageAlt: "Contact Tony Melek",

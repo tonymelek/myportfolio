@@ -19,7 +19,7 @@ npm run build    # output → dist/
 npm run preview  # build + preview
 ```
 
-Open http://localhost:4173 after `npm run preview`. Relative asset paths work on GitHub Pages project sites too.
+Open http://localhost:4173 after `npm run preview`. Pages use folder URLs (`/work/`, `/contact/`) for clean GitHub Pages paths.
 
 ## Content
 

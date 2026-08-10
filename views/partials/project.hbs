@@ -6,7 +6,7 @@
     {{/if}}
     <h3 class="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-4xl lg:text-5xl">
       {{#if caseStudy}}
-        <a href="{{caseStudy}}.html" class="transition hover:text-beam focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-beam">{{title}}</a>
+        <a href="{{@root.root}}{{caseStudy}}/" class="transition hover:text-beam focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-beam">{{title}}</a>
       {{else}}
         {{title}}
       {{/if}}
@@ -23,7 +23,7 @@
     <p class="max-w-prose text-base leading-relaxed text-soft">{{blurb}}</p>
     <div class="mt-6 flex flex-wrap gap-5">
       {{#if caseStudy}}
-        <a class="project-link" href="{{caseStudy}}.html">Case study</a>
+        <a class="project-link" href="{{@root.root}}{{caseStudy}}/">Case study</a>
       {{/if}}
       {{#if live}}
         <a class="project-link" href="{{live}}" target="_blank" rel="noopener noreferrer">Live</a>

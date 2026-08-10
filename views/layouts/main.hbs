@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="apple-touch-icon" href="images/icon.png" />
+  <link rel="icon" href="{{root}}images/favicon.ico" />
+  <link rel="apple-touch-icon" href="{{root}}images/icon.png" />
   <title>{{title}}</title>
   <meta name="description" content="{{description}}" />
   <meta name="robots" content="{{robots}}" />
@@ -30,12 +30,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Outfit:wght@400..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/main.css" />
+  <link rel="stylesheet" href="{{root}}assets/main.css" />
 </head>
 <body class="page-wrap min-h-screen antialiased">
   {{> header}}
   {{{body}}}
   {{> footer}}
-  <script type="module" src="assets/main.js"></script>
+  <script type="module" src="{{root}}assets/main.js"></script>
 </body>
 </html>
