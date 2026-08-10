@@ -1,0 +1,55 @@
+<main class="pt-24 md:pt-28">
+  <header class="mx-auto max-w-6xl px-5 pb-10 md:px-8 md:pb-14">
+    <p class="eyebrow mb-4 reveal">Work</p>
+    <h1 class="reveal font-display text-5xl font-extrabold uppercase leading-[0.9] tracking-tight text-ink md:text-7xl">
+      Selected projects &amp; experience
+    </h1>
+    <p class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-soft">
+      Open-source packages, client CMS pipelines, AI workflows, and bank platform work — the thread is shipping durable systems.
+    </p>
+  </header>
+
+  <section class="border-y border-line bg-panel/40" aria-labelledby="projects-heading">
+    <h2 id="projects-heading" class="sr-only">Projects</h2>
+    <div class="mx-auto max-w-6xl">
+      {{#each projects}}
+        {{> project number=(pad @index)}}
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28" id="experience" aria-labelledby="exp-heading">
+    <div class="reveal mb-12 max-w-2xl">
+      <p class="eyebrow mb-3">Experience</p>
+      <h2 id="exp-heading" class="font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl">
+        Professional timeline
+      </h2>
+    </div>
+
+    <div>
+      {{#each experience}}
+        <article class="reveal grid gap-4 border-t border-line py-10 md:grid-cols-[12rem_minmax(0,1fr)] md:gap-12">
+          <p class="text-sm tabular-nums text-mute">{{when}}</p>
+          <div>
+            <h3 class="font-display text-2xl font-extrabold uppercase tracking-tight text-ink md:text-3xl">{{role}}</h3>
+            <p class="mt-1 text-soft">{{org}}</p>
+            <ul class="mt-5 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed text-soft md:text-base">
+              {{#each points}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+
+    <div class="reveal mt-14">
+      <p class="eyebrow mb-4">Skills</p>
+      <ul class="flex flex-wrap gap-2" aria-label="Technical skills">
+        {{#each skills}}
+          <li class="skill-chip">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+</main>

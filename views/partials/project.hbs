@@ -1,0 +1,29 @@
+<article class="project-band reveal px-5 md:px-8">
+  <p class="font-display text-3xl font-extrabold tabular-nums leading-none text-mute/40 md:text-4xl">{{number}}</p>
+  <div>
+    {{#if tag}}
+      <p class="eyebrow mb-3">{{tag}}</p>
+    {{/if}}
+    <h3 class="font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-4xl lg:text-5xl">
+      {{title}}
+    </h3>
+    {{#if stack}}
+      <ul class="mt-5 flex flex-wrap gap-2">
+        {{#each stack}}
+          <li class="skill-chip">{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+  <div class="md:pt-2">
+    <p class="max-w-prose text-base leading-relaxed text-soft">{{blurb}}</p>
+    <div class="mt-6 flex flex-wrap gap-5">
+      {{#if live}}
+        <a class="project-link" href="{{live}}" target="_blank" rel="noopener noreferrer">Live</a>
+      {{/if}}
+      {{#if code}}
+        <a class="project-link" href="{{code}}" target="_blank" rel="noopener noreferrer">Code</a>
+      {{/if}}
+    </div>
+  </div>
+</article>

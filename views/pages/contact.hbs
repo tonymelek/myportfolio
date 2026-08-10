@@ -1,0 +1,66 @@
+<main class="pt-24 md:pt-28">
+  <section class="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-16">
+    <div class="reveal max-w-2xl">
+      <p class="eyebrow mb-4">Contact</p>
+      <h1 class="font-display text-5xl font-extrabold uppercase leading-[0.9] tracking-tight text-ink md:text-7xl">
+        Say hello
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-soft">
+        Best reach is email. Happy to talk Senior Full Stack / Tech Lead roles, or Meltek engagements for static sites and product builds.
+      </p>
+    </div>
+
+    <div class="reveal mt-14 grid gap-12 border-t border-line pt-12 md:grid-cols-2 md:gap-16">
+      <div>
+        <h2 class="eyebrow mb-6">Direct</h2>
+        <ul class="space-y-6">
+          <li>
+            <span class="mb-1 block text-xs text-mute">Email</span>
+            <a class="project-link text-lg" href="mailto:{{email}}">{{email}}</a>
+          </li>
+          <li>
+            <span class="mb-1 block text-xs text-mute">Phone</span>
+            <a class="project-link text-lg" href="tel:+61426081060">{{phone}}</a>
+          </li>
+          <li>
+            <span class="mb-1 block text-xs text-mute">Location</span>
+            <span class="text-lg text-ink">Clayton South, VIC · Melbourne</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="eyebrow mb-6">Elsewhere</h2>
+        <ul class="space-y-4">
+          <li><a class="project-link text-lg" href="{{linkedin}}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="project-link text-lg" href="{{github}}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a class="project-link text-lg" href="{{resume}}" download>Download résumé (PDF)</a></li>
+        </ul>
+
+        <form class="mt-10 space-y-4" action="mailto:{{email}}" method="get" enctype="text/plain">
+          <label class="block">
+            <span class="mb-1.5 block text-xs text-mute">Subject</span>
+            <input
+              type="text"
+              name="subject"
+              required
+              class="w-full rounded-2xl border border-line bg-panel px-4 py-3 text-ink outline-none ring-beam focus:ring-2"
+              placeholder="Role, project, or hello"
+            />
+          </label>
+          <label class="block">
+            <span class="mb-1.5 block text-xs text-mute">Message</span>
+            <textarea
+              name="body"
+              rows="5"
+              required
+              class="w-full rounded-2xl border border-line bg-panel px-4 py-3 text-ink outline-none ring-beam focus:ring-2"
+              placeholder="A short note is perfect"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-ink">Open in email</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tony Melek — Résumé</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 14mm;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.35;
+      color: #1a1a1a;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin-top: 3px;
+      font-size: 10pt;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .contact {
+      margin-top: 6px;
+      font-size: 8.5pt;
+      color: #444;
+    }
+
+    .contact a { color: #444; text-decoration: none; }
+
+    h2 {
+      margin-top: 12px;
+      margin-bottom: 5px;
+      padding-bottom: 2px;
+      border-bottom: 1.25px solid #222;
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      margin-top: 4px;
+      text-align: justify;
+    }
+
+    .skills {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+    }
+
+    .skills td {
+      vertical-align: top;
+      padding: 1.5px 0;
+      font-size: 9pt;
+    }
+
+    .skills td:first-child {
+      width: 72px;
+      font-weight: 700;
+      color: #222;
+      padding-right: 10px;
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .job-head:first-of-type { margin-top: 4px; }
+
+    .org {
+      font-weight: 700;
+      font-size: 10pt;
+    }
+
+    .when {
+      font-size: 8.5pt;
+      color: #444;
+      white-space: nowrap;
+    }
+
+    .role-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+      font-size: 9pt;
+      color: #333;
+    }
+
+    ul {
+      margin: 0 0 2px 14px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 2.5px;
+    }
+
+    .project {
+      margin-top: 7px;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+    }
+
+    .project-meta {
+      font-weight: 400;
+      color: #555;
+      font-size: 8.5pt;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 3px;
+    }
+
+    .edu-row strong { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tony Melek</h1>
+    <p class="subtitle">Senior Full Stack / Frontend Engineer | React · TypeScript · Platform</p>
+    <p class="contact">
+      Clayton South, VIC 3169 ·
+      <a href="tel:+61426081060">+61 426 081 060</a> ·
+      <a href="mailto:tonymelek.au@gmail.com">tonymelek.au@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/tonymelek/">linkedin.com/in/tonymelek</a> ·
+      <a href="https://github.com/tonymelek">github.com/tonymelek</a> ·
+      <a href="https://tonymelek.github.io/myportfolio/">tonymelek.github.io/myportfolio</a>
+    </p>
+  </header>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Senior Frontend / Full Stack Engineer specialising in platform-scale React and TypeScript,
+    shell/miniapp architectures, and GraphQL BFFs. Currently selected into a small proof-of-value
+    cohort alongside principal engineers to evaluate monorepo and pod strategy and integrate
+    TanStack applications into a React-based host shell — including auth integration and
+    least-privilege scope decisions. Proven at owning complex features end-to-end, mentoring
+    engineers, and shipping production systems with automated testing and AI-assisted delivery.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <table class="skills">
+    <tr>
+      <td>Frontend</td>
+      <td>React, TypeScript, TanStack (Start/Router), Vue 3, Redux, HTML/CSS/SCSS, Vite</td>
+    </tr>
+    <tr>
+      <td>Backend</td>
+      <td>Node.js, GraphQL (BFF), REST, Java (familiar), Go (familiar)</td>
+    </tr>
+    <tr>
+      <td>Cloud</td>
+      <td>AWS (API Gateway+), Firebase, Netlify, CI/CD (Jenkins, Harness, CircleCI)</td>
+    </tr>
+    <tr>
+      <td>Quality</td>
+      <td>Jest, Cypress, SonarQube/Snyk, Git, accessibility-minded delivery</td>
+    </tr>
+    <tr>
+      <td>Practices</td>
+      <td>Modular FE architecture, testing, AI-assisted SDLC (Cursor, coding agents)</td>
+    </tr>
+  </table>
+
+  <h2>Work Experience</h2>
+
+  <div class="job-head">
+    <span class="org">National Australia Bank</span>
+    <span class="when">Jul 2022 – Present</span>
+  </div>
+  <div class="role-line">
+    <span>Senior Analyst Engineer</span>
+    <span>Melbourne, VIC</span>
+  </div>
+  <ul>
+    <li>Selected into a small proof-of-value cohort alongside principal engineers on a digital banking modernisation program — assessing pod topology, monorepo strategy, and TanStack versus React for frontend delivery.</li>
+    <li>Led integration of TanStack applications into an internal platform shell that natively hosts React miniapps, including server-side rendering consumed as React inside the host, using AI-assisted tooling to accelerate exploration without giving up design ownership.</li>
+    <li>Drove auth-integration decisions for the TanStack path: preserved existing tokens and auth strategy while redesigning how authentication plugs into the shell; enforced least privilege by scoping OAuth/API permissions per module instead of a single broad-scoped application.</li>
+    <li>Led architecture and delivery of modernisation POCs; defined scalable frontend/system patterns adopted across squads.</li>
+    <li>Designed a modular React architecture with multiple independent entry points, enabling parallel delivery across 3 squads with minimal merge conflict.</li>
+    <li>Orchestrated migration to a new shell architecture, improving performance and maintainability of the digital platform.</li>
+    <li>Mentored engineers, facilitated design sessions, and raised code quality through review and shared frontend practices.</li>
+  </ul>
+
+  <div class="job-head">
+    <span class="org">National Australia Bank</span>
+    <span class="when">Jul 2021 – Jun 2022</span>
+  </div>
+  <div class="role-line">
+    <span>Analyst Engineer</span>
+    <span>Melbourne, VIC</span>
+  </div>
+  <ul>
+    <li>Built a GraphQL Backend-for-Frontend (BFF) to optimise data fetching, improve frontend performance, and cut unnecessary network calls.</li>
+    <li>Led early architecture and delivery of the Pay-to-Agreements miniapp for a complex payments feature.</li>
+    <li>Delivered production React + TypeScript UIs from UX designs, with accessibility and responsive behaviour as first-class concerns.</li>
+    <li>Established automated unit and integration testing, improving reliability during rapid releases.</li>
+  </ul>
+
+  <div class="job-head">
+    <span class="org">Envision Labs</span>
+    <span class="when">Mar 2021 – May 2021</span>
+  </div>
+  <div class="role-line">
+    <span>Full Stack Developer</span>
+    <span>Melbourne, VIC</span>
+  </div>
+  <ul>
+    <li>Delivered a full-stack insights feature (AWS API Gateway + frontend visualisations) from concept to staging in 8 days.</li>
+    <li>Built a real-time analytics dashboard and Node/PostgreSQL APIs with Redux-managed UI state.</li>
+  </ul>
+
+  <h2>Selected Projects</h2>
+
+  <div class="project">
+    <p class="project-title">
+      Coptic Language Tools
+      <span class="project-meta">· TypeScript monorepo · tonymelek.github.io/coptic-language</span>
+    </p>
+    <ul>
+      <li>Shipped Unicode conversion, pronunciation (EN/AR), dictionary search, and on-screen Coptic keyboard as a public web product.</li>
+      <li>Published reusable npm packages (<code>coptic-readings</code>, <code>bible-citation-text</code>) so calendar/readings and bilingual scripture can be consumed as libraries/SDKs.</li>
+      <li>Built Coptic Synaxis (Vue 3 + Vite): liturgical calendar, daily readings, and bilingual Bible viewer on those packages.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <p class="project-title">
+      Meltek Bookkeeper
+      <span class="project-meta">· WhatsApp + Gemini + Firebase</span>
+    </p>
+    <ul>
+      <li>Built an LLM pipeline: receipt/invoice images → structured merchant/ABN/GST data → ABN enrichment → categorised transactions with human-in-the-loop approval before reconciliation.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <p class="project-title">
+      Heavenly Healing clinic CMS
+      <span class="project-meta">· Vue + Firebase + Handlebars</span>
+    </p>
+    <ul>
+      <li>Built a publish pipeline so the clinic updates content via Vue admin → Cloud Functions → Handlebars-rendered static HTML (no engineering per content edit).</li>
+      <li>Implemented multi-role Firebase access (manager/admin/super-admin), secured APIs, and user provisioning for the client’s admin team.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="edu-row">
+    <span><strong>Bachelor’s — Electronics &amp; Communication Engineering</strong> · Member, Engineers Australia</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>Full Stack Development Certificate</strong> — Monash University</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>Udacity Nanodegrees</strong> — Professional Web Development; Data Analyst; Advanced Cloud DevOps</span>
+  </div>
+</body>
+</html>

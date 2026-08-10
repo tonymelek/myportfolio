@@ -1,29 +1,30 @@
-# Portfolio
-## Description
-My Portfolio has a list of the projects that I have built and links to my social media ( Linked-in and GitHub and my YouTube channel `Beginner Developer Tips and Tricks`).
-The project has 3 pages:
-* Landing Page (Home and  About me).
-![LandingPage](./markdown_assets/landing.jpg)
-![AboutMe](./markdown_assets/aboutme.jpg)
-* Portfolio (My projects)
-![Portfolio](./markdown_assets/portfolio.jpg)
-* Contact Me
-![ContactMe](./markdown_assets/contactme.jpg)
-*The Site is responsive*
+# Portfolio — Tony Melek
 
-![MobileView](./markdown_assets/mobile.jpg)
-## Technologies used
-My portfolio maked use of the `Bootstrap` framework, in addition to `HTML-5` and `CSS-3`
+Static site rebuilt with a **Vite + Tailwind + Handlebars** pipeline (same idea as Marinkart: templates → static HTML, Tailwind for CSS).
 
-## Test
-Please, folow the  link to [My Portfolio](https://tonymelek.github.io/myportfolio/) webpage.
+Live: [tonymelek.github.io/myportfolio](https://tonymelek.github.io/myportfolio/)
 
-## Contact Me
-Please, feel free to send me an e-mail and /or add me to your linked-in and subsribe to my channel on YouTube.
+## Stack
 
-## Feedback
-You are welecome to provide any feedback or comments on the code to be sent to  my e-mail
-[tonymelek.au@gmail.com](mailto:tonymelek.au@gmail.com)
+- Vite 7 — JS/CSS build
+- Tailwind CSS 4
+- Handlebars — pages, layout, partials (`scripts/build-pages.js`)
 
-## License
-My prortfolio is &copy; copyight to Tony Melek 2020
+## Develop
+
+```bash
+npm install
+npm run dev      # watch CSS + pages, preview on :4173
+npm run build    # output → dist/
+npm run preview  # build + preview
+```
+
+Open http://localhost:4173 after `npm run preview`. Relative asset paths work on GitHub Pages project sites too.
+
+## Content
+
+Edit `scripts/pages.js` for copy, projects, and experience. Templates live under `views/`.
+
+## Deploy
+
+Push to `master` — GitHub Actions builds and publishes `dist/` to GitHub Pages.

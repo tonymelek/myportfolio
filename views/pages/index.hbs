@@ -1,0 +1,114 @@
+<main>
+  <section class="hero relative flex min-h-[100svh] flex-col justify-center overflow-hidden px-5 pb-20 pt-28 md:px-8 md:pb-24 md:pt-32">
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+      <p class="eyebrow mb-6 animate-[rise_0.8s_cubic-bezier(0.16,1,0.3,1)_both]">
+        Melbourne · NAB · Meltek
+      </p>
+      <h1 class="hero-name relative">
+        Tony <br class="sm:hidden" />Melek
+      </h1>
+      <p class="hero-lead mt-8 max-w-2xl text-lg leading-relaxed md:mt-10 md:text-xl">
+        Senior Full Stack Engineer — platform migrations, React/Node ecosystems, and products that ship.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <a href="work.html" class="btn btn-warm">View work</a>
+        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28" id="about" aria-labelledby="about-heading">
+    <div class="reveal grid items-start gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+      <div>
+        <p class="eyebrow mb-4">About</p>
+        <h2 id="about-heading" class="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink md:text-5xl">
+          Building systems people can run with
+        </h2>
+      </div>
+      <div class="space-y-5 text-base leading-relaxed text-soft md:pt-2 md:text-lg">
+        <p>
+          Over five years in financial services at NAB, I’ve led modular frontend architecture, GraphQL BFFs, and large-scale digital modernisation — including an elite Proof of Value on NAB Connect with TanStack-in-shell and auth scoped per module.
+        </p>
+        <p>
+          Outside the bank I run Meltek: high-standard static sites, an AI bookkeeping assistant, and a Coptic language platform with live tools and published npm packages. Same bar — schemas, security, and ship.
+        </p>
+        <ul class="flex flex-wrap gap-2 pt-4" aria-label="Technical skills">
+          {{#each skills}}
+            <li class="skill-chip">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-line bg-panel/50" id="featured" aria-labelledby="featured-heading">
+    <div class="mx-auto max-w-6xl px-5 pt-16 md:px-8 md:pt-24">
+      <div class="reveal mb-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="eyebrow mb-3">Selected work</p>
+          <h2 id="featured-heading" class="font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl">
+            What I’m shipping now
+          </h2>
+        </div>
+        <a href="work.html" class="project-link">All projects</a>
+      </div>
+    </div>
+    <div class="mx-auto max-w-6xl">
+      {{#each projects}}
+        {{> project number=(pad @index)}}
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28" id="experience" aria-labelledby="exp-heading">
+    <div class="reveal mb-12 max-w-2xl">
+      <p class="eyebrow mb-3">Experience</p>
+      <h2 id="exp-heading" class="font-display text-4xl font-extrabold uppercase tracking-tight text-ink md:text-5xl">
+        Where the craft gets tested
+      </h2>
+    </div>
+
+    <div class="space-y-0">
+      {{#each experience}}
+        <article class="reveal grid gap-4 border-t border-line py-10 md:grid-cols-[12rem_minmax(0,1fr)] md:gap-12">
+          <p class="text-sm tabular-nums text-mute">{{when}}</p>
+          <div>
+            <h3 class="font-display text-2xl font-extrabold uppercase tracking-tight text-ink md:text-3xl">{{role}}</h3>
+            <p class="mt-1 text-soft">{{org}}</p>
+            <ul class="mt-5 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed text-soft md:text-base">
+              {{#each points}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+
+    <p class="reveal mt-8">
+      <a href="work.html#experience" class="project-link">Full timeline</a>
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-24 md:px-8" aria-labelledby="cta-heading">
+    <div class="reveal overflow-hidden rounded-[2rem] bg-ink px-8 py-14 text-paper md:px-14 md:py-16">
+      <p class="eyebrow-on-dark mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.24em]">Contact</p>
+      <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <div class="max-w-xl">
+          <h2 id="cta-heading" class="font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-5xl">
+            Let’s talk about the next build
+          </h2>
+          <p class="mt-4 text-sm leading-relaxed text-paper/80 md:text-base">
+            Open to Senior Full Stack / Tech Lead roles on React, TypeScript, and Node — and selective Meltek client work.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="mailto:{{email}}" class="btn btn-beam">Email me</a>
+          <a href="contact.html" class="btn btn-ghost-on-dark">Contact page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

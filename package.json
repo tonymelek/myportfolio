@@ -1,0 +1,27 @@
+{
+  "name": "tonymelek-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Tony Melek portfolio — Vite + Tailwind + Handlebars static site",
+  "type": "module",
+  "scripts": {
+    "build:css": "vite build",
+    "build:pages": "node scripts/build-pages.js",
+    "build": "rm -rf dist && npm run build:css && npm run build:pages",
+    "dev:pages": "node --watch scripts/build-pages.js",
+    "dev:css": "vite build --watch",
+    "dev:serve": "npx --yes serve dist -p 4173",
+    "dev": "npm run build && concurrently -k -n css,pages,serve -c cyan,magenta,green \"npm run dev:css\" \"npm run dev:pages\" \"npm run dev:serve\"",
+    "preview": "npm run build && npx --yes serve dist -p 4173"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "concurrently": "^9.2.0",
+    "handlebars": "^4.7.8",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.6"
+  }
+}
