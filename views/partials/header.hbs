@@ -1,3 +1,5 @@
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <header class="pointer-events-none fixed inset-x-0 top-0 z-50">
   <nav class="nav-pill pointer-events-auto hidden md:flex" aria-label="Primary">
     {{#each nav}}
@@ -10,25 +12,28 @@
     <a href="{{resume}}" class="nav-resume" download>Résumé</a>
   </nav>
 
-  <div class="pointer-events-auto flex items-center justify-between px-5 py-4 md:hidden">
-    <a href="{{homeHref}}" class="font-display text-xl font-extrabold uppercase tracking-tight text-white drop-shadow">TM</a>
+  <div
+    class="mobile-chrome pointer-events-auto relative z-50 flex items-center justify-between px-5 py-3 md:hidden{{#if (eq page "home")}} is-over-hero{{/if}}"
+    data-mobile-chrome
+  >
+    <a href="{{homeHref}}" class="mobile-chrome-brand font-display text-xl font-extrabold uppercase tracking-tight">TM</a>
     <button
       type="button"
-      class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-void/50 text-white backdrop-blur-md"
+      class="mobile-chrome-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur-md"
       data-nav-toggle
       aria-expanded="false"
       aria-controls="mobile-nav"
       aria-label="Open menu"
     >
-      <span class="flex flex-col gap-1.5" aria-hidden="true">
-        <span class="block h-0.5 w-4 bg-current"></span>
-        <span class="block h-0.5 w-4 bg-current"></span>
-        <span class="block h-0.5 w-3 bg-current"></span>
+      <span class="menu-icon" aria-hidden="true">
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
       </span>
     </button>
   </div>
 
-  <div id="mobile-nav" class="mobile-nav" data-nav-panel>
+  <div id="mobile-nav" class="mobile-nav" data-nav-panel hidden>
     <div class="flex h-full flex-col px-6 pb-10 pt-24">
       <nav class="flex flex-col gap-6" aria-label="Mobile">
         {{#each nav}}

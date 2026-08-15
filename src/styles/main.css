@@ -35,6 +35,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -102,12 +103,24 @@
     );
   }
 
+  .skip-link {
+    @apply absolute left-4 top-0 z-[100] -translate-y-[120%] rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition;
+  }
+
+  .skip-link:focus {
+    @apply translate-y-4 outline-2 outline-offset-2 outline-beam;
+  }
+
   .nav-pill {
     @apply fixed left-1/2 top-5 z-50 flex -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-void/55 px-2 py-1.5 shadow-[0_10px_40px_-18px_rgba(0,0,0,0.55)] backdrop-blur-xl;
   }
 
   .nav-pill a {
     @apply rounded-full px-3.5 py-2 text-xs font-semibold tracking-wide text-white/90 transition duration-200 hover:bg-white/20 hover:text-white;
+  }
+
+  .nav-pill a:focus-visible {
+    @apply outline-2 outline-offset-2 outline-beam;
   }
 
   .nav-pill a.is-active,
@@ -117,6 +130,77 @@
 
   .nav-pill a.nav-resume {
     @apply bg-beam text-beam-ink hover:bg-blue hover:text-white;
+  }
+
+  /* Default: ink on light — readable on Work / Contact / case studies */
+  .mobile-chrome-brand {
+    @apply text-ink;
+  }
+
+  .mobile-chrome-toggle {
+    @apply border-ink/20 bg-panel/90 text-ink;
+  }
+
+  .mobile-chrome-toggle:focus-visible {
+    @apply outline-2 outline-offset-2 outline-beam;
+  }
+
+  .menu-icon {
+    @apply relative block h-3.5 w-4;
+  }
+
+  .menu-icon-line {
+    @apply absolute left-0 block h-0.5 w-4 bg-current transition duration-200;
+  }
+
+  .menu-icon-line:nth-child(1) {
+    top: 0;
+  }
+
+  .menu-icon-line:nth-child(2) {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .menu-icon-line:nth-child(3) {
+    bottom: 0;
+    width: 0.75rem;
+  }
+
+  .mobile-chrome.is-menu-open .menu-icon-line:nth-child(1) {
+    top: 50%;
+    margin-top: -1px;
+    transform: rotate(45deg);
+  }
+
+  .mobile-chrome.is-menu-open .menu-icon-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-chrome.is-menu-open .menu-icon-line:nth-child(3) {
+    top: 50%;
+    bottom: auto;
+    margin-top: -1px;
+    width: 1rem;
+    transform: rotate(-45deg);
+  }
+
+  /* Home hero only: light chrome while the dark hero fills the viewport top */
+  .mobile-chrome.is-over-hero:not(.is-menu-open) .mobile-chrome-brand {
+    @apply text-white drop-shadow;
+  }
+
+  .mobile-chrome.is-over-hero:not(.is-menu-open) .mobile-chrome-toggle {
+    @apply border-white/25 bg-void/50 text-white;
+  }
+
+  /* Menu open: always ink so close stays visible on the paper overlay */
+  .mobile-chrome.is-menu-open .mobile-chrome-brand {
+    @apply text-ink drop-shadow-none;
+  }
+
+  .mobile-chrome.is-menu-open .mobile-chrome-toggle {
+    @apply border-ink/20 bg-panel text-ink;
   }
 
   .hero-name {
@@ -222,10 +306,15 @@
   }
 
   .mobile-nav {
-    @apply pointer-events-none fixed inset-0 z-40 bg-paper/96 opacity-0 backdrop-blur-md transition duration-300 md:hidden;
+    @apply fixed inset-0 z-40 bg-paper/96 opacity-0 backdrop-blur-md transition duration-300 md:hidden;
+  }
+
+  .mobile-nav[hidden] {
+    display: none;
   }
 
   .mobile-nav.is-open {
     @apply pointer-events-auto opacity-100;
+    display: block;
   }
 }

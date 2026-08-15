@@ -123,10 +123,10 @@ const experience = [
     org: "National Australia Bank",
     when: "Jul 2022 – Present",
     points: [
-      "Selected into an elite Proof of Value cohort (mostly Principal Engineers) for NAB Connect modernisation — pods, monorepo strategy, and TanStack vs React for frontend delivery.",
-      "Fitting TanStack apps into nab-shell (React-native host), including SSR-as-React-in-host, with AI-assisted tooling (Cursor, Devin).",
-      "Auth integration for the TanStack path: same tokens/strategy, per-module OAuth scopes for least privilege.",
-      "Modular React architecture across multiple entry points — parallel delivery across squads with fewer conflicts.",
+      "Selected into a small proof-of-value cohort alongside principal engineers on a digital banking modernisation program — assessing pod topology, monorepo strategy, and TanStack versus React for frontend delivery.",
+      "Led integration of TanStack applications into an internal platform shell that natively hosts React miniapps, including SSR consumed as React inside the host, using AI-assisted tooling to accelerate exploration without giving up design ownership.",
+      "Drove auth-integration decisions for the TanStack path: preserved existing tokens and auth strategy while redesigning how authentication plugs into the shell; least privilege via per-module OAuth/API scopes.",
+      "Designed a modular React architecture with multiple independent entry points — parallel delivery across 3 squads with minimal merge conflict.",
     ],
   },
   {
@@ -192,11 +192,11 @@ export const pages = [
       ogUrl: `${SITE_URL}/`,
       ogTitle: "Tony Melek — Senior Full Stack Engineer",
       ogDescription:
-        "Platform modernisation, React/Node ecosystems, and products that ship — from NAB Connect to open Coptic tooling.",
+        "Platform-scale React and TypeScript — host-shell integration, GraphQL BFFs, and products that ship.",
       ogImageAlt: "Tony Melek",
       twitterTitle: "Tony Melek — Senior Full Stack Engineer",
       twitterDescription:
-        "Platform modernisation, React/Node ecosystems, and products that ship.",
+        "Platform-scale React and TypeScript — host-shell integration, GraphQL BFFs, and products that ship.",
       twitterImageAlt: "Tony Melek",
       skills,
       projects: projects.filter((p) => p.highlight),
